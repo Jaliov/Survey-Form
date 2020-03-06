@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <title>Survey oFrm</title>
+</head>
+<style>
+    
+    body {
+        background-image: linear-gradient(rgba(136, 74, 74, 0.5), rgb(219, 38, 38)),  url("https://upload.wikimedia.org/wikipedia/commons/2/21/ChenFake.jpg");
+        background-repeat: no-repeat;
+        background-size: 75%;
+        background-attachment: fixed;
+        background-position: center;  
+        background-position-x: 5fr;  
+        color:  rgb(245, 245, 245);
+        font-family: 'Acme', sans-serif;
+        font-size: 16px;
+    }
+    #description {
+        text-align: center;
+        color: white;
+    }
+    
+    #surveyform {
+       text-align: left; 
+       margin-left: 40%;
+    }
+    #name, #email, #age  {
+        margin-bottom: 20px;
+        
+    }
+    h1 {
+        text-align: center;
+        color: white;
+        font-family: 'Trade Winds', cursive;
+        font-weight: bold; 
+    }
+    
+   
+    h4{
+        margin-bottom: -.15px;
+    }
+   
+    #submit {
+    background-color: rgb(230, 30, 30);
+    border-radius: 6px;
+    color: rgb(245, 245, 245);
+    font-size: 1em;
+    height: 40px;
+    border: 2px solid;
+    border-color:  rgb((245, 245, 245));
+    padding: 1px 6px;
+    margin-left: auto;
+    }
+   
+   
+</style>
+<body>
+    <a href="https://upload.wikimedia.org/wikipedia/commons/2/21/ChenFake.jpg"></a>
+   <h1 id="title">Martial Arts Survey Form</h1>
+   <h3 id="description">A brief survey to determine your favorite martial art and your level of involvement with it</h3>
+   
+   <form action="submit" id="surveyform">
+    <div>
+            <label for="name" id="name-label" >Please enter your name</label>
+            <br>
+            <input type="text" id="name" placeholder = "name" required>
+    </div>
+    <div>
+             <label for="email" id="email-label">Please enter your email</label>
+             <br>
+             <input type="email" id="email" required placeholder = "email">
+    </div>
+    <div>
+            <label for="age" id="number-label">Please enter your age</label>
+            <br>
+            <input type="number" id = "number" required id="age" min = 1 max = 125 placeholder = "age" required>
+    </div>
+    <div>
+            <h4>What is your connection with the martial arts?</h4>  <!--This should be radio buttons-->
+             <select name="select" id="dropdown">
+             <option value= "fan">Just a fan</option>    
+             <option value="student">Student</option>
+             <option value="expert">Expert</option>
+             <option value="instructor">Instructor</option>
+             <option value="master">Master</option>
+             <option value= "greater">Greater than Bruce Lee!</option>
+             </select>
+            </div>
+
+            <h4>What is your favorite martial art?</h4>
+            <div id = "type">
+            <form id  = "type" input type="radio">
+            <input type="radio" id = "karate" name ="attribute" value="Karate">
+            <label for="Karate">Karate</label><br>
+            
+            <input type="radio" id = "Tae Kwon Do" name="attribute" value="Tae Kwon Do">
+            <label for="Tae kwon Do">Tae Kwon Do</label><br>
+            
+            <input type="radio" name="attribute" value= "Win Chun">
+            <label for="Win Chun">Win Chun or other kungfu style</label><br>
+            
+            <input type="radio" name="attribute" value= "Muay Thai">
+            <label for="Win Chun">Muay Thai</label><br>
+            
+            <input type="radio" name="attribute" value= "Brazilian Jiu Jitsu">
+            <label for="Brazilian Jiu Jitsu">Brazilian Jiu Jitsu</label><br>
+            
+            <input type="radio" name="attribute" value= "Jeet Kune Do">
+            <label for="Jeet Kune Do">Jeet Kune Do</label><br>
+            
+            <input type="radio" name="attribute" value= "Tai chi">
+            <label for="Tai chi">Tai chi</label><br>
+           
+            <input type="radio" name="attribute" value= "other">
+            <label for="other">Other, please indicate below</label><br>
+            <input type="text" id="other" placeholder = "other" required>
+            </select>
+        </div>
+            <div>
+            <h4>Reason for your choice:</h4> 
+             <div id = "checkbox">
+            <input type="checkbox" value= "attribute" id= "practical">
+            <label for="practical">Most practical for self defense</label><br>
+            <input type="checkbox" value= "attribute" id = "aesthetic">
+            <label for="aesthetic">Most aesthetic to watch</label><br>
+            <input type="checkbox" value= "attribute" id= "fitness">
+            <label for="fitness">Best for overall fitness</label><br>
+            <input type="checkbox" value= "attribute">
+            <label for="fitness">Best for personal/spiritual development</label><br>
+            <input type="checkbox" value= "attribute">
+            <label for="fitness">Best for all of the above</label><br>
+            </div>
+            </div>
+            <br>
+            <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" 
+            placeholder="Additional comments here..."></textarea>
+            <div style = "text-align: left;">
+            <button id = "submit" type = "submit">Submit</button>
+            </div>
+        </form>
+
+</body>
+</html>
